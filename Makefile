@@ -82,7 +82,7 @@ ct-build:
 	docker build -t blackswifthosting/http-tar-streamer:$(commit_hash) .
 
 ct-run:
-	docker run --rm -it blackswifthosting/http-tar-streamer:$(commit_hash) bash
+	docker run --rm -it -p 8080:8080 blackswifthosting/http-tar-streamer:$(commit_hash)
 
 #===============================================================================
 # Binary build
